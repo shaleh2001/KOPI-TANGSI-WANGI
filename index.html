@@ -3,285 +3,2264 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="KOPI TANGSI WANGI - Greenbeans, Roastbeans dan Ground Coffee pilihan.">
-<title>KOPI TANGSI WANGI | Coffee & Beans</title>
+
+<meta name="description" content="KOPI TANGSI WANGI - Greenbeans, Roastbeans dan Ground Coffee premium pilihan.">
+<meta name="theme-color" content="#17110c">
+
+<title>KOPI TANGSI WANGI | Premium Coffee & Beans</title>
+
 <style>
 :root{
-  --blue:#07579b; --blue2:#0b3f70; --navy:#062f55; --cream:#f7f4ed;
-  --gold:#c79a45; --text:#18324a; --white:#fff; --shadow:0 14px 35px rgba(4,47,85,.12);
+  --coffee:#21140d;
+  --coffee2:#3a2112;
+  --coffee3:#5a3219;
+  --gold:#c79a45;
+  --gold2:#e2bd70;
+  --cream:#f7f1e8;
+  --cream2:#eee2d2;
+  --white:#fff;
+  --text:#2b211a;
+  --muted:#75695e;
+  --green:#159447;
+  --shadow:0 20px 50px rgba(40,20,5,.14);
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--text);line-height:1.55}
-a{text-decoration:none;color:inherit}
-.container{width:min(1160px,92%);margin:auto}
-header{position:sticky;top:0;z-index:20;background:rgba(6,47,85,.97);backdrop-filter:blur(10px);box-shadow:0 4px 18px #0002}
-.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
-.logo{display:flex;align-items:center;gap:10px;color:white;font-weight:900;letter-spacing:.8px}
-.logo-mark{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#fff,#b9ddf7);color:var(--blue2);font-size:22px}
-.logo small{display:block;color:#cde7fb;font-size:10px;letter-spacing:2px}
-nav{display:flex;gap:24px;color:white;font-weight:700;font-size:14px}
-nav a:hover{color:#bde4ff}
-.hero{position:relative;overflow:hidden;background:
- radial-gradient(circle at 80% 15%,#2378b9 0 12%,transparent 35%),
- linear-gradient(135deg,#062f55,#0870b8 55%,#0b3d6d);color:white}
-.hero:before,.hero:after{content:"";position:absolute;border:2px solid #ffffff25;border-radius:50%;width:650px;height:260px;right:-120px;top:-80px;transform:rotate(-12deg)}
-.hero:after{width:520px;height:190px;right:-20px;top:0;border-color:#ffffff18}
-.hero-inner{position:relative;z-index:1;min-height:560px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:35px;padding:70px 0}
-.badge{display:inline-block;background:#ffffff18;border:1px solid #ffffff3a;padding:8px 14px;border-radius:999px;font-size:13px;letter-spacing:1.5px;margin-bottom:20px}
-h1{font-family:Georgia,serif;font-size:clamp(42px,6vw,78px);line-height:.98;margin-bottom:18px}
-.hero h1 span{color:#d8b46b}
-.hero p{font-size:18px;color:#e7f4ff;max-width:600px;margin-bottom:28px}
-.buttons{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;border-radius:12px;font-weight:800;border:1px solid transparent;transition:.2s}
-.btn-primary{background:white;color:var(--navy)}
-.btn-primary:hover{transform:translateY(-2px)}
-.btn-outline{border-color:#ffffff66;color:white}
-.hero-card{background:#ffffff12;border:1px solid #ffffff30;border-radius:28px;padding:18px;box-shadow:0 20px 50px #001c3530}
-.hero-card img{width:100%;height:390px;object-fit:cover;border-radius:20px}
-.hero-card .caption{display:flex;justify-content:space-between;align-items:center;padding:14px 4px 2px;font-weight:800}
-section{padding:78px 0}
-.section-title{text-align:center;margin-bottom:35px}
-.section-title .eyebrow{color:var(--blue);font-weight:900;letter-spacing:2px;font-size:12px}
-.section-title h2{font-family:Georgia,serif;font-size:42px;color:var(--navy);margin:7px 0}
-.section-title p{color:#63788b}
-.category-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.category{background:white;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);transition:.25s}
-.category:hover{transform:translateY(-5px)}
-.category img{width:100%;height:220px;object-fit:cover}
-.category-body{padding:20px}
-.category h3{color:var(--navy);font-size:22px}
-.category p{color:#6b7e8e;margin:7px 0 15px;font-size:14px}
-.link{color:var(--blue);font-weight:900}
-.price-section{background:#edf6fc}
-.price-tabs{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:28px}
-.tab{cursor:pointer;border:1px solid #b8d3e7;background:white;color:var(--navy);padding:11px 17px;border-radius:999px;font-weight:900}
-.tab.active,.tab:hover{background:var(--blue);color:white;border-color:var(--blue)}
-.table-wrap{overflow-x:auto;background:white;border-radius:20px;box-shadow:var(--shadow)}
-table{border-collapse:collapse;width:100%;min-width:720px}
-caption{padding:22px 20px 10px;text-align:left;font-family:Georgia,serif;font-size:25px;font-weight:900;color:var(--navy)}
-th{background:linear-gradient(135deg,var(--navy),var(--blue));color:white;padding:14px;text-align:center}
-td{padding:13px 12px;border-bottom:1px solid #d8e6ef;text-align:center;font-weight:700}
-td:first-child,td:nth-child(2){text-align:left}
-tr:hover td{background:#f3f9fd}
-.price{color:var(--blue2);font-weight:900}
-.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.product{background:white;border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
-.product img{width:100%;height:220px;object-fit:cover}
-.product-body{padding:18px}
-.tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
-.tag{font-size:11px;background:#e8f4fc;color:var(--blue);padding:5px 8px;border-radius:999px;font-weight:800}
-.product h3{font-size:21px;color:var(--navy)}
-.product p{font-size:13px;color:#708292;margin:6px 0 14px}
-.product-price{font-size:24px;color:var(--blue);font-weight:900}
-.order{margin-top:12px;width:100%;background:#128c4b;color:white}
-.order:hover{background:#0b6e3a}
-.about{background:var(--navy);color:white}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
-.about h2{font-family:Georgia,serif;font-size:42px;margin-bottom:15px}
-.about p{color:#d5e7f5;margin-bottom:18px}
-.points{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.point{border:1px solid #ffffff20;background:#ffffff0d;padding:15px;border-radius:14px}
-.point b{display:block;margin-bottom:3px}
-footer{background:#041f38;color:#bdd3e3;padding:28px 0}
-.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.floating{position:fixed;right:18px;bottom:18px;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:#13a552;color:white;font-size:26px;box-shadow:0 8px 25px #0004;z-index:30}
-.note{font-size:12px;color:#7b8c99;margin-top:12px}
-@media(max-width:850px){
- nav{display:none}.hero-inner{grid-template-columns:1fr;padding:55px 0}.hero-card{max-width:520px}
- .category-grid,.product-grid{grid-template-columns:1fr 1fr}
- .about-grid{grid-template-columns:1fr}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
-@media(max-width:560px){
- section{padding:55px 0}.category-grid,.product-grid{grid-template-columns:1fr}
- .hero-card img{height:280px}.section-title h2,.about h2{font-size:34px}
- h1{font-size:50px}.points{grid-template-columns:1fr}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--cream);
+  color:var(--text);
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button{
+  font-family:inherit;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(25,15,9,.94);
+  backdrop-filter:blur(14px);
+  box-shadow:0 5px 25px rgba(0,0,0,.2);
+}
+
+.nav{
+  min-height:74px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  color:white;
+  font-weight:900;
+  letter-spacing:1px;
+}
+
+.logo-mark{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(145deg,#f4d28d,#9c6828);
+  color:#21140d;
+  font-size:23px;
+  box-shadow:0 5px 18px rgba(199,154,69,.35);
+}
+
+.logo small{
+  display:block;
+  color:#d8c3a2;
+  font-size:9px;
+  letter-spacing:2.5px;
+  margin-top:2px;
+}
+
+nav{
+  display:flex;
+  gap:27px;
+  color:white;
+  font-size:14px;
+  font-weight:700;
+}
+
+nav a{
+  position:relative;
+  padding:8px 0;
+}
+
+nav a:after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:0;
+  height:2px;
+  background:var(--gold2);
+  transition:.3s;
+}
+
+nav a:hover{
+  color:var(--gold2);
+}
+
+nav a:hover:after{
+  width:100%;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  position:relative;
+  overflow:hidden;
+  min-height:720px;
+  background:
+    radial-gradient(circle at 80% 20%,rgba(199,154,69,.25),transparent 30%),
+    linear-gradient(135deg,#130b07,#342012 52%,#6a3d1c);
+  color:white;
+}
+
+.hero:before{
+  content:"";
+  position:absolute;
+  width:650px;
+  height:650px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:50%;
+  right:-250px;
+  top:-200px;
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  width:450px;
+  height:450px;
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:50%;
+  left:-250px;
+  bottom:-250px;
+}
+
+.hero-inner{
+  position:relative;
+  z-index:2;
+  min-height:720px;
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  align-items:center;
+  gap:55px;
+  padding:70px 0;
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.2);
+  padding:9px 15px;
+  border-radius:999px;
+  font-size:12px;
+  letter-spacing:2px;
+  color:#ead2a5;
+  margin-bottom:22px;
+}
+
+.badge:before{
+  content:"●";
+  color:var(--gold2);
+  font-size:9px;
+}
+
+h1{
+  font-family:Georgia,serif;
+  font-size:clamp(45px,6vw,78px);
+  line-height:.98;
+  margin-bottom:22px;
+}
+
+.hero h1 span{
+  color:var(--gold2);
+}
+
+.hero-text{
+  font-size:18px;
+  color:#eadfd3;
+  max-width:580px;
+  margin-bottom:30px;
+}
+
+.buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 20px;
+  border-radius:12px;
+  font-weight:900;
+  border:1px solid transparent;
+  transition:.25s;
+}
+
+.btn-primary{
+  background:linear-gradient(135deg,#e6c078,#b47b2c);
+  color:#21140d;
+  box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.btn-primary:hover{
+  transform:translateY(-3px);
+  box-shadow:0 15px 30px rgba(0,0,0,.3);
+}
+
+.btn-outline{
+  border-color:rgba(255,255,255,.35);
+  color:white;
+  background:rgba(255,255,255,.04);
+}
+
+.btn-outline:hover{
+  background:white;
+  color:#21140d;
+}
+
+/* =========================
+   PREMIUM IMAGE SLIDER
+========================= */
+
+.hero-slider{
+  position:relative;
+  width:100%;
+  max-width:650px;
+  margin-left:auto;
+}
+
+.slider-window{
+  position:relative;
+  overflow:hidden;
+  border-radius:30px;
+  border:1px solid rgba(255,255,255,.22);
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.45),
+    0 0 0 8px rgba(255,255,255,.035);
+  background:#140b06;
+  touch-action:pan-y;
+  cursor:grab;
+}
+
+.slider-window:active{
+  cursor:grabbing;
+}
+
+.slides{
+  display:flex;
+  transition:transform .7s cubic-bezier(.77,0,.18,1);
+  will-change:transform;
+}
+
+.slide{
+  min-width:100%;
+  height:500px;
+  position:relative;
+  overflow:hidden;
+}
+
+.slide img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transform:scale(1.04);
+  transition:transform 6s ease;
+}
+
+.slide.active img{
+  transform:scale(1.12);
+}
+
+.slide:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(to top,rgba(0,0,0,.7),transparent 55%),
+    linear-gradient(90deg,rgba(0,0,0,.15),transparent);
+}
+
+.slide-info{
+  position:absolute;
+  z-index:2;
+  left:28px;
+  right:28px;
+  bottom:27px;
+}
+
+.slide-label{
+  display:inline-block;
+  background:rgba(199,154,69,.92);
+  color:#21140d;
+  padding:6px 11px;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:1px;
+  margin-bottom:8px;
+}
+
+.slide-info h3{
+  font-family:Georgia,serif;
+  font-size:31px;
+  color:white;
+}
+
+.slide-info p{
+  color:#eee3d7;
+  font-size:13px;
+}
+
+.slider-arrow{
+  position:absolute;
+  z-index:5;
+  top:50%;
+  transform:translateY(-50%);
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.35);
+  background:rgba(0,0,0,.38);
+  color:white;
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+  font-size:22px;
+  transition:.25s;
+}
+
+.slider-arrow:hover{
+  background:var(--gold);
+  color:#21140d;
+}
+
+.prev{
+  left:18px;
+}
+
+.next{
+  right:18px;
+}
+
+.slider-dots{
+  position:absolute;
+  z-index:6;
+  left:50%;
+  bottom:15px;
+  transform:translateX(-50%);
+  display:flex;
+  gap:7px;
+}
+
+.dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:rgba(255,255,255,.5);
+  cursor:pointer;
+  transition:.3s;
+}
+
+.dot.active{
+  width:25px;
+  border-radius:20px;
+  background:var(--gold2);
+}
+
+/* =========================
+   SECTION
+========================= */
+
+section{
+  padding:85px 0;
+}
+
+.container{
+  width:min(1180px,92%);
+  margin:auto;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.eyebrow{
+  color:#a16b29;
+  font-weight:900;
+  letter-spacing:3px;
+  font-size:11px;
+}
+
+.section-title h2{
+  font-family:Georgia,serif;
+  font-size:44px;
+  color:var(--coffee);
+  margin:7px 0;
+}
+
+.section-title p{
+  color:var(--muted);
+}
+
+/* =========================
+   CATEGORY
+========================= */
+
+.category-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+.category{
+  background:white;
+  border-radius:25px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  transition:.35s;
+  border:1px solid #eadfd1;
+}
+
+.category:hover{
+  transform:translateY(-8px);
+  box-shadow:0 28px 55px rgba(55,29,8,.2);
+}
+
+.image-box{
+  overflow:hidden;
+  height:245px;
+}
+
+.category img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .6s;
+}
+
+.category:hover img{
+  transform:scale(1.09);
+}
+
+.category-body{
+  padding:22px;
+}
+
+.category h3{
+  color:var(--coffee);
+  font-family:Georgia,serif;
+  font-size:23px;
+}
+
+.category p{
+  color:#766b62;
+  margin:8px 0 16px;
+  font-size:14px;
+}
+
+.link{
+  color:#9b6729;
+  font-weight:900;
+}
+
+/* =========================
+   PRICE
+========================= */
+
+.price-section{
+  background:
+    linear-gradient(rgba(238,226,210,.93),rgba(238,226,210,.93)),
+    url("https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1600");
+  background-size:cover;
+  background-attachment:fixed;
+}
+
+.price-tabs{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:28px;
+}
+
+.tab{
+  cursor:pointer;
+  border:1px solid #d6c5ae;
+  background:white;
+  color:var(--coffee);
+  padding:12px 18px;
+  border-radius:999px;
+  font-weight:900;
+  transition:.25s;
+}
+
+.tab.active,
+.tab:hover{
+  background:var(--coffee);
+  color:white;
+  border-color:var(--coffee);
+}
+
+.table-wrap{
+  overflow-x:auto;
+  background:white;
+  border-radius:22px;
+  box-shadow:var(--shadow);
+  border:1px solid #eadfd1;
+}
+
+table{
+  border-collapse:collapse;
+  width:100%;
+  min-width:760px;
+}
+
+caption{
+  padding:24px 20px 12px;
+  text-align:left;
+  font-family:Georgia,serif;
+  font-size:25px;
+  font-weight:900;
+  color:var(--coffee);
+}
+
+th{
+  background:linear-gradient(135deg,#21140d,#5b3217);
+  color:white;
+  padding:15px 12px;
+  text-align:center;
+  font-size:13px;
+  letter-spacing:.5px;
+}
+
+td{
+  padding:14px 12px;
+  border-bottom:1px solid #eee3d5;
+  text-align:center;
+  font-weight:700;
+  font-size:14px;
+}
+
+td:first-child,
+td:nth-child(2){
+  text-align:left;
+}
+
+tr:hover td{
+  background:#fbf6ef;
+}
+
+.price{
+  color:#945f22;
+  font-weight:900;
+}
+
+/* =========================
+   PRODUCT
+========================= */
+
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+.product{
+  background:white;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  border:1px solid #eadfd1;
+  transition:.35s;
+}
+
+.product:hover{
+  transform:translateY(-7px);
+  box-shadow:0 28px 55px rgba(55,29,8,.18);
+}
+
+.product-image{
+  height:250px;
+  overflow:hidden;
+  position:relative;
+}
+
+.product img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .7s;
+}
+
+.product:hover img{
+  transform:scale(1.1);
+}
+
+.product-image:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.25),transparent);
+  pointer-events:none;
+}
+
+.product-body{
+  padding:20px;
+}
+
+.tags{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+  margin-bottom:10px;
+}
+
+.tag{
+  font-size:10px;
+  background:#f2e5d2;
+  color:#8b5b25;
+  padding:5px 9px;
+  border-radius:999px;
+  font-weight:900;
+}
+
+.product h3{
+  font-family:Georgia,serif;
+  font-size:23px;
+  color:var(--coffee);
+}
+
+.product p{
+  font-size:13px;
+  color:#766b62;
+  margin:6px 0 14px;
+}
+
+.product-price{
+  font-size:23px;
+  color:#925d21;
+  font-weight:900;
+}
+
+.order{
+  margin-top:13px;
+  width:100%;
+  background:linear-gradient(135deg,#179c4e,#087b39);
+  color:white;
+}
+
+.order:hover{
+  background:#075d2c;
+  transform:translateY(-2px);
+}
+
+/* =========================
+   PREMIUM INFO
+========================= */
+
+.premium-strip{
+  background:#21140d;
+  color:white;
+  padding:30px 0;
+}
+
+.premium-items{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.premium-item{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  padding:10px;
+}
+
+.premium-icon{
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  background:rgba(199,154,69,.15);
+  border:1px solid rgba(199,154,69,.3);
+  display:grid;
+  place-items:center;
+  font-size:22px;
+  flex-shrink:0;
+}
+
+.premium-item b{
+  display:block;
+  color:#e6c078;
+}
+
+.premium-item span{
+  color:#cdbca8;
+  font-size:12px;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+  background:
+    linear-gradient(135deg,#160c07,#3a2112);
+  color:white;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
+  align-items:center;
+}
+
+.about h2{
+  font-family:Georgia,serif;
+  font-size:43px;
+  line-height:1.1;
+  margin:8px 0 17px;
+}
+
+.about p{
+  color:#dccfc0;
+  margin-bottom:20px;
+}
+
+.points{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:13px;
+}
+
+.point{
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.06);
+  padding:18px;
+  border-radius:16px;
+  transition:.3s;
+}
+
+.point:hover{
+  transform:translateY(-4px);
+  border-color:rgba(199,154,69,.5);
+}
+
+.point b{
+  display:block;
+  margin-bottom:4px;
+  color:#e6c078;
+}
+
+.point span{
+  color:#d4c6b6;
+  font-size:13px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  background:#0d0704;
+  color:#bcae9f;
+  padding:32px 0;
+}
+
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.footer-inner b{
+  color:#e4c17d;
+}
+
+.note{
+  font-size:12px;
+  color:#786b5e;
+  margin-top:20px;
+  border-top:1px solid rgba(255,255,255,.08);
+  padding-top:15px;
+}
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.floating{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:#16a34a;
+  color:white;
+  font-size:29px;
+  box-shadow:0 10px 30px rgba(0,0,0,.35);
+  z-index:200;
+  animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+  0%,100%{
+    transform:scale(1);
+  }
+  50%{
+    transform:scale(1.08);
+  }
+}
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+.reveal{
+  opacity:0;
+  transform:translateY(35px);
+  transition:opacity .8s,transform .8s;
+}
+
+.reveal.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+  nav{
+    display:none;
+  }
+
+  .hero-inner{
+    grid-template-columns:1fr;
+    padding:60px 0;
+  }
+
+  .hero-slider{
+    margin:auto;
+  }
+
+  .hero{
+    min-height:auto;
+  }
+
+  .hero-inner{
+    min-height:auto;
+  }
+
+  .category-grid,
+  .product-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .premium-items{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .about-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:600px){
+
+  section{
+    padding:60px 0;
+  }
+
+  .container{
+    width:90%;
+  }
+
+  .logo{
+    font-size:13px;
+  }
+
+  .logo small{
+    font-size:7px;
+  }
+
+  .hero-inner{
+    padding:45px 0;
+    gap:35px;
+  }
+
+  h1{
+    font-size:48px;
+  }
+
+  .hero-text{
+    font-size:16px;
+  }
+
+  .slide{
+    height:390px;
+  }
+
+  .slide-info h3{
+    font-size:25px;
+  }
+
+  .category-grid,
+  .product-grid{
+    grid-template-columns:1fr;
+  }
+
+  .section-title h2,
+  .about h2{
+    font-size:34px;
+  }
+
+  .premium-items{
+    grid-template-columns:1fr;
+  }
+
+  .points{
+    grid-template-columns:1fr;
+  }
+
+  .slider-arrow{
+    width:38px;
+    height:38px;
+  }
+
+  .floating{
+    width:55px;
+    height:55px;
+    right:15px;
+    bottom:15px;
+  }
 }
 </style>
 </head>
+
 <body>
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
   <div class="container nav">
+
     <a class="logo" href="#home">
       <div class="logo-mark">☕</div>
-      <div>KOPI TANGSI WANGI<small>COFFEE • BEANS • ROAST</small></div>
+
+      <div>
+        KOPI TANGSI WANGI
+        <small>PREMIUM COFFEE • BEANS • ROAST</small>
+      </div>
     </a>
+
     <nav>
       <a href="#home">Beranda</a>
       <a href="#produk">Produk</a>
       <a href="#harga">Daftar Harga</a>
       <a href="#tentang">Tentang</a>
     </nav>
+
   </div>
 </header>
 
+
+<!-- =========================
+     HERO
+========================= -->
+
 <main>
+
 <section class="hero" id="home">
+
   <div class="container hero-inner">
+
     <div>
-      <span class="badge">SPECIALTY COFFEE • TANGSI WANGI</span>
-      <h1>Rasa kopi yang <span>bercerita.</span></h1>
-      <p>Greenbeans, roastbeans, dan ground coffee dengan pilihan proses Arabika, Tunggal, Robusta, serta Bland. Pilih ukuran sesuai kebutuhan Anda.</p>
+
+      <span class="badge">
+        PREMIUM COFFEE • TANGSI WANGI
+      </span>
+
+      <h1>
+        Rasa kopi yang
+        <span>bercerita.</span>
+      </h1>
+
+      <p class="hero-text">
+        Greenbeans, roastbeans, dan ground coffee pilihan
+        dengan kualitas premium untuk kebutuhan rumah,
+        coffee shop, reseller, maupun bisnis kopi Anda.
+      </p>
+
       <div class="buttons">
-        <a class="btn btn-primary" href="#harga">Lihat Daftar Harga</a>
-        <a class="btn btn-outline" href="https://wa.me/6283890508425?text=Halo%20Kopi%20Tangsi%20Wangi,%20saya%20ingin%20memesan%20kopi." target="_blank">Pesan via WhatsApp</a>
+
+        <a class="btn btn-primary" href="#harga">
+          ☕ Lihat Daftar Harga
+        </a>
+
+        <a class="btn btn-outline"
+           href="https://wa.me/6283890508425?text=Halo%20Kopi%20Tangsi%20Wangi,%20saya%20ingin%20memesan%20kopi."
+           target="_blank">
+          💬 Pesan via WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- SLIDER -->
+
+    <div class="hero-slider">
+
+      <div class="slider-window" id="sliderWindow">
+
+        <div class="slides" id="slides">
+
+          <!-- SLIDE 1 -->
+
+          <div class="slide active">
+
+            <img
+              src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=1400"
+              alt="Kopi premium"
+            >
+
+            <div class="slide-info">
+
+              <span class="slide-label">
+                PREMIUM COFFEE
+              </span>
+
+              <h3>Freshly Brewed Coffee</h3>
+
+              <p>
+                Aroma dan karakter kopi untuk pengalaman
+                menikmati kopi yang lebih premium.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- SLIDE 2 -->
+
+          <div class="slide">
+
+            <img
+              src="https://images.pexels.com/photos/894695/pexels-photo-894695.jpeg?auto=compress&cs=tinysrgb&w=1400"
+              alt="Biji kopi premium"
+            >
+
+            <div class="slide-info">
+
+              <span class="slide-label">
+                COFFEE BEANS
+              </span>
+
+              <h3>Biji Kopi Premium</h3>
+
+              <p>
+                Pilihan greenbeans dan roastbeans
+                untuk penikmat kopi.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- SLIDE 3 -->
+
+          <div class="slide">
+
+            <img
+              src="https://images.pexels.com/photos/585750/pexels-photo-585750.jpeg?auto=compress&cs=tinysrgb&w=1400"
+              alt="Kopi bubuk premium"
+            >
+
+            <div class="slide-info">
+
+              <span class="slide-label">
+                GROUND COFFEE
+              </span>
+
+              <h3>Kopi Bubuk Pilihan</h3>
+
+              <p>
+                Praktis untuk berbagai metode seduh
+                di rumah maupun coffee shop.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- SLIDE 4 -->
+
+          <div class="slide">
+
+            <img
+              src="https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1400"
+              alt="Roasted coffee beans"
+            >
+
+            <div class="slide-info">
+
+              <span class="slide-label">
+                ROASTBEANS
+              </span>
+
+              <h3>Roasted Coffee Beans</h3>
+
+              <p>
+                Biji kopi roasting untuk menghasilkan
+                aroma dan rasa yang lebih kaya.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- TOMBOL -->
+
+        <button class="slider-arrow prev" id="prev">
+          ‹
+        </button>
+
+        <button class="slider-arrow next" id="next">
+          ›
+        </button>
+
+
+        <!-- DOT -->
+
+        <div class="slider-dots" id="dots">
+
+          <span class="dot active" data-slide="0"></span>
+          <span class="dot" data-slide="1"></span>
+          <span class="dot" data-slide="2"></span>
+          <span class="dot" data-slide="3"></span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     PREMIUM FEATURES
+========================= -->
+
+<div class="premium-strip">
+
+  <div class="container premium-items">
+
+    <div class="premium-item">
+      <div class="premium-icon">🫘</div>
+      <div>
+        <b>Biji Pilihan</b>
+        <span>Greenbeans berkualitas</span>
       </div>
     </div>
-    <div class="hero-card">
-      <img src="https://images.pexels.com/photos/942801/pexels-photo-942801.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Biji kopi - ilustrasi Pexels">
-      <div class="caption"><span>Fresh Coffee Beans</span><span>☕</span></div>
+
+    <div class="premium-item">
+      <div class="premium-icon">🔥</div>
+      <div>
+        <b>Fresh Roasting</b>
+        <span>Roastbeans pilihan</span>
+      </div>
     </div>
+
+    <div class="premium-item">
+      <div class="premium-icon">☕</div>
+      <div>
+        <b>Ground Coffee</b>
+        <span>Siap untuk diseduh</span>
+      </div>
+    </div>
+
+    <div class="premium-item">
+      <div class="premium-icon">📲</div>
+      <div>
+        <b>Pesan Mudah</b>
+        <span>Langsung WhatsApp</span>
+      </div>
+    </div>
+
   </div>
-</section>
+
+</div>
+
+
+<!-- =========================
+     PRODUK
+========================= -->
 
 <section id="produk">
+
   <div class="container">
+
     <div class="section-title">
-      <div class="eyebrow">PILIHAN KOPI</div>
-      <h2>Produk Kami</h2>
-      <p>PRODUK YANG BERKUALITAS & PREMIUM .</p>
+
+      <div class="eyebrow">
+        PILIHAN KOPI
+      </div>
+
+      <h2>
+        Produk Kami
+      </h2>
+
+      <p>
+        Produk berkualitas untuk penikmat kopi dan kebutuhan bisnis.
+      </p>
+
     </div>
+
+
     <div class="category-grid">
-      <article class="category">
-        <img src="https://images.pexels.com/photos/7125590/pexels-photo-7125590.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Green coffee beans">
-        <div class="category-body"><h3>Greenbeans / Beras</h3><p>Biji kopi hijau untuk kebutuhan roasting dan produksi.</p><a class="link" href="#greenbeans">Lihat harga →</a></div>
+
+
+      <!-- GREENBEANS -->
+
+      <article class="category reveal">
+
+        <div class="image-box">
+
+          <img
+            src="https://images.pexels.com/photos/7125590/pexels-photo-7125590.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            alt="Greenbeans kopi"
+          >
+
+        </div>
+
+        <div class="category-body">
+
+          <h3>
+            Greenbeans / Beras
+          </h3>
+
+          <p>
+            Biji kopi hijau pilihan untuk kebutuhan
+            roasting dan produksi.
+          </p>
+
+          <a class="link" href="#greenbeans">
+            Lihat harga →
+          </a>
+
+        </div>
+
       </article>
-      <article class="category">
-        <img src="https://images.pexels.com/photos/7125705/pexels-photo-7125705.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Roasted coffee beans">
-        <div class="category-body"><h3>Roastbeans / Roasting</h3><p>Biji kopi yang telah melalui proses roasting.</p><a class="link" href="#roastbeans">Lihat harga →</a></div>
+
+
+      <!-- ROASTBEANS -->
+
+      <article class="category reveal">
+
+        <div class="image-box">
+
+          <img
+            src="https://images.pexels.com/photos/7125705/pexels-photo-7125705.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            alt="Roastbeans kopi"
+          >
+
+        </div>
+
+        <div class="category-body">
+
+          <h3>
+            Roastbeans / Roasting
+          </h3>
+
+          <p>
+            Biji kopi yang telah melalui proses roasting
+            untuk menghasilkan aroma dan karakter khas.
+          </p>
+
+          <a class="link" href="#roastbeans">
+            Lihat harga →
+          </a>
+
+        </div>
+
       </article>
-      <article class="category">
-        <img src="https://images.pexels.com/photos/333524/pexels-photo-333524.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Ground coffee">
-        <div class="category-body"><h3>Ground Coffee / Bubuk</h3><p>Kopi bubuk siap digunakan untuk berbagai metode seduh.</p><a class="link" href="#ground">Lihat harga →</a></div>
+
+
+      <!-- GROUND -->
+
+      <article class="category reveal">
+
+        <div class="image-box">
+
+          <img
+            src="https://images.pexels.com/photos/333524/pexels-photo-333524.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            alt="Ground coffee"
+          >
+
+        </div>
+
+        <div class="category-body">
+
+          <h3>
+            Ground Coffee / Bubuk
+          </h3>
+
+          <p>
+            Kopi bubuk siap digunakan untuk berbagai
+            metode seduh.
+          </p>
+
+          <a class="link" href="#ground">
+            Lihat harga →
+          </a>
+
+        </div>
+
       </article>
+
     </div>
+
   </div>
+
 </section>
+
+
+<!-- =========================
+     PRICE LIST
+========================= -->
 
 <section class="price-section" id="harga">
+
 <div class="container">
+
   <div class="section-title">
-    <div class="eyebrow">PRICE LIST</div>
-    <h2>Daftar Harga Coffee Tangsi Wangi</h2>
-    <p>Harga mengikuti tabel yang Anda kirim.</p>
+
+    <div class="eyebrow">
+      PRICE LIST
+    </div>
+
+    <h2>
+      Daftar Harga Coffee Tangsi Wangi
+    </h2>
+
+    <p>
+      Pilih kategori kopi yang ingin Anda lihat.
+    </p>
+
   </div>
+
+
   <div class="price-tabs">
-    <button class="tab active" onclick="showTable('greenbeans',this)">Greenbeans / Beras</button>
-    <button class="tab" onclick="showTable('roastbeans',this)">Roastbeans / Roasting</button>
-    <button class="tab" onclick="showTable('ground',this)">Ground Coffee / Bubuk</button>
+
+    <button class="tab active"
+            onclick="showTable('greenbeans',this)">
+      Greenbeans / Beras
+    </button>
+
+    <button class="tab"
+            onclick="showTable('roastbeans',this)">
+      Roastbeans / Roasting
+    </button>
+
+    <button class="tab"
+            onclick="showTable('ground',this)">
+      Ground Coffee / Bubuk
+    </button>
+
   </div>
+
+
+  <!-- GREENBEANS -->
 
   <div class="table-wrap" id="greenbeans">
+
     <table>
-      <caption>GREENBEANS / BERAS</caption>
-      <thead><tr><th>PROSES</th><th>PRODUK</th><th>1 KG</th><th>500 GRAM</th><th>250 GRAM</th></tr></thead>
+
+      <caption>
+        GREENBEANS / BERAS
+      </caption>
+
+      <thead>
+
+        <tr>
+          <th>PROSES</th>
+          <th>PRODUK</th>
+          <th>1 KG</th>
+          <th>500 GRAM</th>
+          <th>250 GRAM</th>
+        </tr>
+
+      </thead>
+
       <tbody>
-        <tr><td rowspan="4">ARABIKA</td><td>WINE</td><td class="price">Rp260.000</td><td class="price">Rp135.000</td><td class="price">Rp73.000</td></tr>
-        <tr><td>NATURAL</td><td class="price">Rp210.000</td><td class="price">Rp110.000</td><td class="price">Rp60.000</td></tr>
-        <tr><td>HONEY</td><td class="price">Rp190.000</td><td class="price">Rp100.000</td><td class="price">Rp55.000</td></tr>
-        <tr><td>FULLWASH</td><td class="price">Rp170.000</td><td class="price">Rp85.000</td><td class="price">Rp48.000</td></tr>
-        <tr><td></td><td>TUNGGAL</td><td class="price">Rp210.000</td><td class="price">Rp110.000</td><td class="price">Rp60.000</td></tr>
-        <tr><td></td><td>ROBUSTA</td><td class="price">Rp110.000</td><td class="price">Rp60.000</td><td class="price">Rp35.000</td></tr>
+
+        <tr>
+          <td rowspan="4">ARABIKA</td>
+          <td>WINE</td>
+          <td class="price">Rp260.000</td>
+          <td class="price">Rp135.000</td>
+          <td class="price">Rp73.000</td>
+        </tr>
+
+        <tr>
+          <td>NATURAL</td>
+          <td class="price">Rp210.000</td>
+          <td class="price">Rp110.000</td>
+          <td class="price">Rp60.000</td>
+        </tr>
+
+        <tr>
+          <td>HONEY</td>
+          <td class="price">Rp190.000</td>
+          <td class="price">Rp100.000</td>
+          <td class="price">Rp55.000</td>
+        </tr>
+
+        <tr>
+          <td>FULLWASH</td>
+          <td class="price">Rp170.000</td>
+          <td class="price">Rp85.000</td>
+          <td class="price">Rp48.000</td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>TUNGGAL</td>
+          <td class="price">Rp210.000</td>
+          <td class="price">Rp110.000</td>
+          <td class="price">Rp60.000</td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>ROBUSTA</td>
+          <td class="price">Rp110.000</td>
+          <td class="price">Rp60.000</td>
+          <td class="price">Rp35.000</td>
+        </tr>
+
       </tbody>
+
     </table>
+
   </div>
 
-  <div class="table-wrap" id="roastbeans" style="display:none">
+
+  <!-- ROASTBEANS -->
+
+  <div class="table-wrap"
+       id="roastbeans"
+       style="display:none">
+
     <table>
-      <caption>ROASTBEANS / ROASTING</caption>
-      <thead><tr><th>PROSES</th><th>PRODUK</th><th>1 KG</th><th>500 GRAM</th><th>250 GRAM</th></tr></thead>
+
+      <caption>
+        ROASTBEANS / ROASTING
+      </caption>
+
+      <thead>
+
+        <tr>
+          <th>PROSES</th>
+          <th>PRODUK</th>
+          <th>1 KG</th>
+          <th>500 GRAM</th>
+          <th>250 GRAM</th>
+        </tr>
+
+      </thead>
+
       <tbody>
-        <tr><td rowspan="4">ARABIKA</td><td>WINE</td><td class="price">Rp300.000</td><td class="price">Rp160.000</td><td class="price">Rp85.000</td></tr>
-        <tr><td>NATURAL</td><td class="price">Rp270.000</td><td class="price">Rp140.000</td><td class="price">Rp75.000</td></tr>
-        <tr><td>HONEY</td><td class="price">Rp260.000</td><td class="price">Rp135.000</td><td class="price">Rp75.000</td></tr>
-        <tr><td>FULLWASH</td><td class="price">Rp210.000</td><td class="price">Rp110.000</td><td class="price">Rp60.000</td></tr>
-        <tr><td></td><td>TUNGGAL</td><td class="price">Rp270.000</td><td class="price">Rp140.000</td><td class="price">Rp75.000</td></tr>
-        <tr><td></td><td>ROBUSTA</td><td class="price">Rp160.000</td><td class="price">Rp85.000</td><td class="price">Rp48.000</td></tr>
-        <tr><td></td><td>BLAND</td><td class="price">Rp210.000</td><td class="price">Rp110.000</td><td class="price">Rp60.000</td></tr>
+
+        <tr>
+          <td rowspan="4">ARABIKA</td>
+          <td>WINE</td>
+          <td class="price">Rp300.000</td>
+          <td class="price">Rp160.000</td>
+          <td class="price">Rp85.000</td>
+        </tr>
+
+        <tr>
+          <td>NATURAL</td>
+          <td class="price">Rp270.000</td>
+          <td class="price">Rp140.000</td>
+          <td class="price">Rp75.000</td>
+        </tr>
+
+        <tr>
+          <td>HONEY</td>
+          <td class="price">Rp260.000</td>
+          <td class="price">Rp135.000</td>
+          <td class="price">Rp75.000</td>
+        </tr>
+
+        <tr>
+          <td>FULLWASH</td>
+          <td class="price">Rp210.000</td>
+          <td class="price">Rp110.000</td>
+          <td class="price">Rp60.000</td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>TUNGGAL</td>
+          <td class="price">Rp270.000</td>
+          <td class="price">Rp140.000</td>
+          <td class="price">Rp75.000</td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>ROBUSTA</td>
+          <td class="price">Rp160.000</td>
+          <td class="price">Rp85.000</td>
+          <td class="price">Rp48.000</td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>BLAND</td>
+          <td class="price">Rp210.000</td>
+          <td class="price">Rp110.000</td>
+          <td class="price">Rp60.000</td>
+        </tr>
+
       </tbody>
+
     </table>
+
   </div>
 
-  <div class="table-wrap" id="ground" style="display:none">
+
+  <!-- GROUND -->
+
+  <div class="table-wrap"
+       id="ground"
+       style="display:none">
+
     <table>
-      <caption>GROUND COFFEE / BUBUK</caption>
-      <thead><tr><th>PROSES</th><th>PRODUK</th><th>1 KG</th><th>500 GRAM</th><th>250 GRAM</th><th>200 GRAM</th></tr></thead>
+
+      <caption>
+        GROUND COFFEE / BUBUK
+      </caption>
+
+      <thead>
+
+        <tr>
+          <th>PROSES</th>
+          <th>PRODUK</th>
+          <th>1 KG</th>
+          <th>500 GRAM</th>
+          <th>250 GRAM</th>
+          <th>200 GRAM</th>
+        </tr>
+
+      </thead>
+
       <tbody>
-        <tr><td rowspan="4">ARABIKA</td><td>WINE</td><td class="price">Rp410.000</td><td class="price">Rp210.000</td><td class="price">Rp110.000</td><td class="price">Rp88.000</td></tr>
-        <tr><td>NATURAL</td><td class="price">Rp385.000</td><td class="price">Rp198.000</td><td class="price">Rp105.000</td><td class="price">Rp85.000</td></tr>
-        <tr><td>HONEY</td><td class="price">Rp360.000</td><td class="price">Rp185.000</td><td class="price">Rp98.000</td><td class="price">Rp80.000</td></tr>
-        <tr><td>FULLWASH</td><td class="price">Rp290.000</td><td class="price">Rp155.000</td><td class="price">Rp80.000</td><td class="price">Rp70.000</td></tr>
-        <tr><td></td><td>TUNGGAL</td><td class="price">Rp385.000</td><td class="price">Rp198.000</td><td class="price">Rp105.000</td><td class="price">Rp85.000</td></tr>
-        <tr><td></td><td>ROBUSTA</td><td class="price">Rp260.000</td><td class="price">Rp135.000</td><td class="price">Rp75.000</td><td class="price">Rp60.000</td></tr>
-        <tr><td></td><td>BLAND</td><td class="price">Rp290.000</td><td class="price">Rp155.000</td><td class="price">Rp80.000</td><td class="price">Rp70.000</td></tr>
+
+        <tr>
+          <td rowspan="4">ARABIKA</td>
+          <td>WINE</td>
+          <td class="price">Rp410.000</td>
+          <td class="price">Rp210.000</td>
+          <td class="price">Rp110.000</td>
+          <td class="price">Rp88.000</td>
+        </tr>
+
+        <tr>
+          <td>NATURAL</td>
+          <td class="price">Rp385.000</td>
+          <td class="price">Rp198.000</td>
+          <td class="price">Rp105.000</td>
+          <td class="price">Rp85.000</td>
+        </tr>
+
+        <tr>
+          <td>HONEY</td>
+          <td class="price">Rp360.000</td>
+          <td class="price">Rp185.000</td>
+          <td class="price">Rp98.000</td>
+          <td class="price">Rp80.000</td>
+        </tr>
+
+        <tr>
+          <td>FULLWASH</td>
+          <td class="price">Rp290.000</td>
+          <td class="price">Rp155.000</td>
+          <td class="price">Rp80.000</td>
+          <td class="price">Rp70.000</td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>TUNGGAL</td>
+          <td class="price">Rp385.000</td>
+          <td class="price">Rp198.000</td>
+          <td class="price">Rp105.000</td>
+          <td class="price">Rp85.000</td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>ROBUSTA</td>
+          <td class="price">Rp260.000</td>
+          <td class="price">Rp135.000</td>
+          <td class="price">Rp75.000</td>
+          <td class="price">Rp60.000</td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>BLAND</td>
+          <td class="price">Rp290.000</td>
+          <td class="price">Rp155.000</td>
+          <td class="price">Rp80.000</td>
+          <td class="price">Rp70.000</td>
+        </tr>
+
       </tbody>
+
     </table>
+
   </div>
+
 </div>
+
 </section>
+
+
+<!-- =========================
+     VARIAN
+========================= -->
 
 <section>
+
 <div class="container">
+
   <div class="section-title">
-    <div class="eyebrow">PILIHAN POPULER</div>
-    <h2>Varian Kopi</h2>
-    <p>KATALOG KOPI TANGSI WANGI.</p>
+
+    <div class="eyebrow">
+      PILIHAN POPULER
+    </div>
+
+    <h2>
+      Varian Kopi
+    </h2>
+
+    <p>
+      Katalog pilihan KOPI TANGSI WANGI.
+    </p>
+
   </div>
+
+
   <div class="product-grid">
-    <article class="product">
-      <img src="https://images.pexels.com/photos/9151528/pexels-photo-9151528.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Coffee cherries">
-      <div class="product-body"><div class="tags"><span class="tag">ARABIKA</span><span class="tag">WINE</span></div><h3>Wine</h3><p>Karakter proses spesial dengan tampilan produk kopi yang elegan.</p><div class="product-price">Mulai Rp73.000</div><a class="btn order" href="https://wa.me/6283890508425?text=Halo%20Kopi%20Tangsi%20Wangi,%20saya%20tertarik%20kopi%20Wine." target="_blank">Pesan Sekarang</a></div>
+
+
+    <article class="product reveal">
+
+      <div class="product-image">
+
+        <img
+          src="https://images.pexels.com/photos/9151528/pexels-photo-9151528.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          alt="Coffee Wine"
+        >
+
+      </div>
+
+      <div class="product-body">
+
+        <div class="tags">
+          <span class="tag">ARABIKA</span>
+          <span class="tag">WINE</span>
+        </div>
+
+        <h3>
+          Wine
+        </h3>
+
+        <p>
+          Karakter proses spesial dengan tampilan
+          produk kopi yang elegan.
+        </p>
+
+        <div class="product-price">
+          Mulai Rp73.000
+        </div>
+
+        <a class="btn order"
+           href="https://wa.me/6283890508425?text=Halo%20Kopi%20Tangsi%20Wangi,%20saya%20tertarik%20kopi%20Wine."
+           target="_blank">
+          Pesan Sekarang
+        </a>
+
+      </div>
+
     </article>
-    <article class="product">
-      <img src="https://images.pexels.com/photos/35920045/pexels-photo-35920045.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Natural coffee cherries">
-      <div class="product-body"><div class="tags"><span class="tag">ARABIKA</span><span class="tag">NATURAL</span></div><h3>Natural</h3><p>Varian natural untuk penikmat kopi dengan karakter proses yang khas.</p><div class="product-price">Mulai Rp60.000</div><a class="btn order" href="https://wa.me/6283890508425?text=Halo%20Kopi%20Tangsi%20Wangi,%20saya%20tertarik%20kopi%20Natural." target="_blank">Pesan Sekarang</a></div>
+
+
+    <article class="product reveal">
+
+      <div class="product-image">
+
+        <img
+          src="https://images.pexels.com/photos/35920045/pexels-photo-35920045.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          alt="Coffee Natural"
+        >
+
+      </div>
+
+      <div class="product-body">
+
+        <div class="tags">
+          <span class="tag">ARABIKA</span>
+          <span class="tag">NATURAL</span>
+        </div>
+
+        <h3>
+          Natural
+        </h3>
+
+        <p>
+          Varian natural untuk penikmat kopi dengan
+          karakter proses yang khas.
+        </p>
+
+        <div class="product-price">
+          Mulai Rp60.000
+        </div>
+
+        <a class="btn order"
+           href="https://wa.me/6283890508425?text=Halo%20Kopi%20Tangsi%20Wangi,%20saya%20tertarik%20kopi%20Natural."
+           target="_blank">
+          Pesan Sekarang
+        </a>
+
+      </div>
+
     </article>
-    <article class="product">
-      <img src="https://images.pexels.com/photos/333524/pexels-photo-333524.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Ground coffee">
-      <div class="product-body"><div class="tags"><span class="tag">GROUND COFFEE</span><span class="tag">BUBUK</span></div><h3>Ground Coffee</h3><p>Kopi bubuk dalam beberapa ukuran sesuai daftar harga.</p><div class="product-price">Mulai Rp60.000</div><a class="btn order" href="https://wa.me/6283890508425?text=Halo%20Kopi%20Tangsi%20Wangi,%20saya%20tertarik%20Ground%20Coffee." target="_blank">Pesan Sekarang</a></div>
+
+
+    <article class="product reveal">
+
+      <div class="product-image">
+
+        <img
+          src="https://images.pexels.com/photos/333524/pexels-photo-333524.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          alt="Ground Coffee"
+        >
+
+      </div>
+
+      <div class="product-body">
+
+        <div class="tags">
+          <span class="tag">GROUND COFFEE</span>
+          <span class="tag">BUBUK</span>
+        </div>
+
+        <h3>
+          Ground Coffee
+        </h3>
+
+        <p>
+          Kopi bubuk dalam beberapa ukuran
+          sesuai daftar harga.
+        </p>
+
+        <div class="product-price">
+          Mulai Rp60.000
+        </div>
+
+        <a class="btn order"
+           href="https://wa.me/6283890508425?text=Halo%20Kopi%20Tangsi%20Wangi,%20saya%20tertarik%20Ground%20Coffee."
+           target="_blank">
+          Pesan Sekarang
+        </a>
+
+      </div>
+
     </article>
+
   </div>
+
 </div>
+
 </section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section class="about" id="tentang">
+
 <div class="container about-grid">
+
   <div>
-    <div class="eyebrow" style="color:#9dd7ff">KOPI TANGSI WANGI</div>
-    <h2>Segelas kopi dimulai dari biji yang tepat dan berkualitas.</h2>
-    <p>Kami menghadirkan pilihan greenbeans, roastbeans, dan ground coffee dengan ukuran kemasan yang fleksibel. Gunakan daftar harga di atas sebagai katalog online.</p>
-    <a class="btn btn-primary" href="https://wa.me/6283890508425?text=Halo%20Shaleh%20Irawan,%20saya%20ingin%20bertanya%20tentang%20Kopi%20Tangsi%20Wangi." target="_blank">Hubungi Shaleh Irawan</a>
+
+    <div class="eyebrow" style="color:#e2bd70">
+      KOPI TANGSI WANGI
+    </div>
+
+    <h2>
+      Segelas kopi dimulai dari biji yang tepat.
+    </h2>
+
+    <p>
+      Kami menghadirkan pilihan greenbeans,
+      roastbeans, dan ground coffee dengan
+      ukuran kemasan yang fleksibel.
+    </p>
+
+    <a class="btn btn-primary"
+       href="https://wa.me/6283890508425?text=Halo%20Shaleh%20Irawan,%20saya%20ingin%20bertanya%20tentang%20Kopi%20Tangsi%20Wangi."
+       target="_blank">
+      Hubungi Shaleh Irawan
+    </a>
+
   </div>
+
+
   <div class="points">
-    <div class="point"><b>☕ Pilihan Proses</b><span>Wine, Natural, Honey & Fullwash.</span></div>
-    <div class="point"><b>🫘 Pilihan Biji</b><span>Arabika, Tunggal, Robusta & Bland.</span></div>
-    <div class="point"><b>📦 Beragam Ukuran</b><span>200 g, 250 g, 500 g dan 1 kg.</span></div>
-    <div class="point"><b>📲 Mudah Pesan</b><span>Langsung melalui WhatsApp.</span></div>
+
+    <div class="point">
+      <b>☕ Pilihan Proses</b>
+      <span>
+        Wine, Natural, Honey & Fullwash.
+      </span>
+    </div>
+
+    <div class="point">
+      <b>🫘 Pilihan Biji</b>
+      <span>
+        Arabika, Tunggal, Robusta & Bland.
+      </span>
+    </div>
+
+    <div class="point">
+      <b>📦 Beragam Ukuran</b>
+      <span>
+        200 g, 250 g, 500 g dan 1 kg.
+      </span>
+    </div>
+
+    <div class="point">
+      <b>📲 Mudah Pesan</b>
+      <span>
+        Langsung melalui WhatsApp.
+      </span>
+    </div>
+
   </div>
+
 </div>
+
 </section>
+
 </main>
 
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
+
 <div class="container footer-inner">
-  <div><b>KOPI TANGSI WANGI</b><br><span>Greenbeans • Roastbeans • Ground Coffee</span></div>
-  <div><b>Shaleh Irawan</b><br>WhatsApp: 083890508425</div>
+
+  <div>
+    <b>KOPI TANGSI WANGI</b>
+    <br>
+    <span>
+      Greenbeans • Roastbeans • Ground Coffee
+    </span>
+  </div>
+
+  <div>
+    <b>Shaleh Irawan</b>
+    <br>
+    WhatsApp: 083890508425
+  </div>
+
 </div>
+
 <div class="container">
-  <p class="note">Foto ilustrasi berasal dari Pexels. Untuk toko online, sebaiknya ganti foto ilustrasi dengan foto produk asli KOPI TANGSI WANGI agar pelanggan melihat produk yang benar.</p>
+
+  <p class="note">
+    Foto ilustrasi menggunakan gambar dari Pexels.
+    Anda dapat mengganti URL gambar pada kode dengan
+    foto produk asli KOPI TANGSI WANGI.
+  </p>
+
 </div>
+
 </footer>
 
-<a class="floating" href="https://wa.me/6283890508425?text=Halo%20Kopi%20Tangsi%20Wangi,%20saya%20ingin%20memesan%20kopi." target="_blank" aria-label="WhatsApp">✆</a>
+
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
+
+<a class="floating"
+   href="https://wa.me/6283890508425?text=Halo%20Kopi%20Tangsi%20Wangi,%20saya%20ingin%20memesan%20kopi."
+   target="_blank"
+   aria-label="WhatsApp">
+  ☎
+</a>
+
 
 <script>
-function showTable(id,btn){
-  document.querySelectorAll('.table-wrap').forEach(x=>x.style.display='none');
-  document.getElementById(id).style.display='block';
-  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
-  btn.classList.add('active');
+
+/* =========================================
+   SLIDER PREMIUM
+========================================= */
+
+const slides = document.getElementById("slides");
+const slideItems = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+
+let currentSlide = 0;
+let autoSlide;
+
+function goToSlide(index){
+
+  if(index < 0){
+    index = slideItems.length - 1;
+  }
+
+  if(index >= slideItems.length){
+    index = 0;
+  }
+
+  currentSlide = index;
+
+  slides.style.transform =
+    "translateX(-" + (currentSlide * 100) + "%)";
+
+  slideItems.forEach((slide,i)=>{
+    slide.classList.toggle(
+      "active",
+      i === currentSlide
+    );
+  });
+
+  dots.forEach((dot,i)=>{
+    dot.classList.toggle(
+      "active",
+      i === currentSlide
+    );
+  });
 }
+
+
+function nextSlide(){
+  goToSlide(currentSlide + 1);
+}
+
+
+function prevSlide(){
+  goToSlide(currentSlide - 1);
+}
+
+
+document.getElementById("next")
+.addEventListener("click",()=>{
+
+  nextSlide();
+  restartAutoSlide();
+
+});
+
+
+document.getElementById("prev")
+.addEventListener("click",()=>{
+
+  prevSlide();
+  restartAutoSlide();
+
+});
+
+
+dots.forEach(dot=>{
+
+  dot.addEventListener("click",()=>{
+
+    goToSlide(
+      Number(dot.dataset.slide)
+    );
+
+    restartAutoSlide();
+
+  });
+
+});
+
+
+function startAutoSlide(){
+
+  autoSlide = setInterval(()=>{
+
+    nextSlide();
+
+  },5000);
+
+}
+
+
+function restartAutoSlide(){
+
+  clearInterval(autoSlide);
+
+  startAutoSlide();
+
+}
+
+
+startAutoSlide();
+
+
+/* =========================================
+   SWIPE / DRAG
+========================================= */
+
+const sliderWindow =
+document.getElementById("sliderWindow");
+
+let startX = 0;
+let endX = 0;
+
+sliderWindow.addEventListener(
+"touchstart",
+function(e){
+
+  startX = e.touches[0].clientX;
+
+},
+{passive:true}
+);
+
+
+sliderWindow.addEventListener(
+"touchend",
+function(e){
+
+  endX = e.changedTouches[0].clientX;
+
+  handleSwipe();
+
+},
+{passive:true}
+);
+
+
+function handleSwipe(){
+
+  const distance = endX - startX;
+
+  if(Math.abs(distance) < 50){
+    return;
+  }
+
+  if(distance < 0){
+    nextSlide();
+  }else{
+    prevSlide();
+  }
+
+  restartAutoSlide();
+
+}
+
+
+/* =========================================
+   MOUSE DRAG MACBOOK
+========================================= */
+
+let mouseDown = false;
+let mouseStart = 0;
+
+sliderWindow.addEventListener(
+"mousedown",
+function(e){
+
+  mouseDown = true;
+  mouseStart = e.clientX;
+
+});
+
+
+window.addEventListener(
+"mouseup",
+function(e){
+
+  if(!mouseDown){
+    return;
+  }
+
+  mouseDown = false;
+
+  const distance =
+    e.clientX - mouseStart;
+
+  if(Math.abs(distance) < 50){
+    return;
+  }
+
+  if(distance < 0){
+    nextSlide();
+  }else{
+    prevSlide();
+  }
+
+  restartAutoSlide();
+
+});
+
+
+/* =========================================
+   PRICE TAB
+========================================= */
+
+function showTable(id,btn){
+
+  document
+    .querySelectorAll(".table-wrap")
+    .forEach(x=>{
+      x.style.display="none";
+    });
+
+  document.getElementById(id)
+    .style.display="block";
+
+  document
+    .querySelectorAll(".tab")
+    .forEach(x=>{
+      x.classList.remove("active");
+    });
+
+  btn.classList.add("active");
+
+}
+
+
+/* =========================================
+   SCROLL ANIMATION
+========================================= */
+
+const revealItems =
+document.querySelectorAll(".reveal");
+
+const observer =
+new IntersectionObserver(
+(entries)=>{
+
+  entries.forEach(entry=>{
+
+    if(entry.isIntersecting){
+
+      entry.target.classList.add("show");
+
+    }
+
+  });
+
+},
+{
+  threshold:.15
+}
+);
+
+
+revealItems.forEach(item=>{
+  observer.observe(item);
+});
+
+
+/* =========================================
+   KEYBOARD SLIDER
+========================================= */
+
+document.addEventListener(
+"keydown",
+function(e){
+
+  if(e.key === "ArrowRight"){
+    nextSlide();
+    restartAutoSlide();
+  }
+
+  if(e.key === "ArrowLeft"){
+    prevSlide();
+    restartAutoSlide();
+  }
+
+});
+
+
 </script>
+
 </body>
 </html>
