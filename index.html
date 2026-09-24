@@ -556,7 +556,7 @@ table{
   table-layout:fixed;
 }
 
- caption{
+caption{
   padding:24px 20px 12px;
   text-align:left;
   font-family:Georgia,serif;
@@ -565,25 +565,31 @@ table{
   color:var(--coffee);
 }
 
+th{
+  background:linear-gradient(135deg,#21140d,#5b3217);
+  color:white;
+  padding:15px 12px;
+  text-align:center;
+  font-size:13px;
+  letter-spacing:.5px;
+}
+
 td{
-  word-wrap:break-word;
-  overflow-wrap:break-word;
+  padding:14px 12px;
+  border-bottom:1px solid #eee3d5;
+  text-align:center;
+  font-weight:700;
+  font-size:14px;
 }
 
-th:first-child{
-  width:16%;
+td:first-child,
+td:nth-child(2){
+  text-align:left;
 }
 
-th:nth-child(2){
-  width:22%;
+tr:hover td{
+  background:#fbf6ef;
 }
-
-th:nth-child(3),
-th:nth-child(4),
-th:nth-child(5){
-  width:20.66%;
-}
-
   .price{
   color:#945f22;
   font-weight:900;
