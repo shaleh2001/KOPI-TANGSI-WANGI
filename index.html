@@ -551,11 +551,12 @@ section{
 }
 
 table{
-  border-collapse:collapse;
+ table{
   width:100%;
-  min-width:760px;
+  border-collapse:separate;
+  border-spacing:0;
+  table-layout:fixed;
 }
-
 caption{
   padding:24px 20px 12px;
   text-align:left;
@@ -566,25 +567,40 @@ caption{
 }
 
 th{
-  background:linear-gradient(135deg,#21140d,#5b3217);
-  color:white;
-  padding:15px 12px;
+  background:linear-gradient(135deg,#24150d,#4a2915);
+  color:#f8dfaa;
+  padding:15px 10px;
   text-align:center;
-  font-size:13px;
-  letter-spacing:.5px;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:1px;
+  border:0;
 }
-
+  
 td{
-  padding:14px 12px;
-  border-bottom:1px solid #eee3d5;
+  padding:16px 12px;
+  border-bottom:1px solid #eee5d9;
   text-align:center;
-  font-weight:700;
+  font-weight:600;
   font-size:14px;
+  color:#3b3027;
+  background:#fff;
+}
+  
+td:first-child{
+  text-align:left;
+  color:#795126;
+  font-weight:900;
 }
 
-td:first-child,
 td:nth-child(2){
   text-align:left;
+  color:#2a1a10;
+  font-weight:800;
+}
+
+td:nth-child(n+3){
+  text-align:right;
 }
 
 tr:hover td{
@@ -592,8 +608,10 @@ tr:hover td{
 }
 
 .price{
-  color:#945f22;
+  color:#9a6326;
+  font-size:15px;
   font-weight:900;
+  white-space:nowrap;
 }
 
 /* =========================
@@ -1464,7 +1482,6 @@ footer{
         </tr>
 
         <tr>
-          <td></td>
           <td>NATURAL</td>
           <td class="price">Rp210.000</td>
           <td class="price">Rp110.000</td>
@@ -1472,7 +1489,6 @@ footer{
         </tr>
 
         <tr>
-          <td></td>
           <td>HONEY</td>
           <td class="price">Rp190.000</td>
           <td class="price">Rp100.000</td>
@@ -1480,7 +1496,6 @@ footer{
         </tr>
 
         <tr>
-          <td></td>
           <td>FULLWASH</td>
           <td class="price">Rp170.000</td>
           <td class="price">Rp85.000</td>
@@ -1488,7 +1503,6 @@ footer{
         </tr>
 
         <tr>
-          <td></td>
           <td>TUNGGAL</td>
           <td class="price">Rp210.000</td>
           <td class="price">Rp110.000</td>
