@@ -583,22 +583,8 @@ th:nth-child(4),
 th:nth-child(5){
   width:20.66%;
 }
-th{
-  padding:13px 8px;
-  font-size:13px;
-  white-space:nowrap;
-}
 
-td{
-  padding:13px 8px;
-  font-size:14px;
-}
-
-tr:hover td{
-  background:#fbf6ef;
-}
-
-.price{
+  .price{
   color:#945f22;
   font-weight:900;
 }
@@ -922,6 +908,50 @@ footer{
 }
 
 @media(max-width:600px){
+
+  .table-wrap{
+    width:100%;
+    overflow-x:hidden;
+    border-radius:16px;
+  }
+
+  table{
+    width:100%;
+    min-width:0;
+    table-layout:fixed;
+  }
+
+  th{
+    padding:10px 4px;
+    font-size:10px;
+    white-space:normal;
+  }
+
+  td{
+    padding:10px 4px;
+    font-size:11px;
+  }
+
+  caption{
+    font-size:20px;
+    padding:18px 15px 10px;
+  }
+
+  th:first-child{
+    width:17%;
+  }
+
+  th:nth-child(2){
+    width:22%;
+  }
+
+  th:nth-child(3),
+  th:nth-child(4),
+  th:nth-child(5){
+    width:20.33%;
+  }
+
+}
 
   section{
     padding:60px 0;
