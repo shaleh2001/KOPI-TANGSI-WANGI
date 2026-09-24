@@ -553,7 +553,7 @@ section{
 table{
   border-collapse:collapse;
   width:100%;
-  min-width:760px;
+  min-width:fixed;
 }
 
 caption{
@@ -568,23 +568,23 @@ caption{
 th{
   background:linear-gradient(135deg,#21140d,#5b3217);
   color:white;
-  padding:15px 12px;
+  padding:13px 8px;
   text-align:center;
   font-size:13px;
   letter-spacing:.5px;
 }
 
 td{
-  padding:14px 12px;
+  padding:13px 12px;
   border-bottom:1px solid #eee3d5;
   text-align:center;
   font-weight:700;
   font-size:14px;
 }
 
-td:first-child,
+td:nth-child,
 td:nth-child(2){
-  text-align:left;
+  width:22%;
 }
 
 tr:hover td{
@@ -915,6 +915,48 @@ footer{
 }
 
 @media(max-width:600px){
+
+  .table-wrap{
+    width:100%;
+    overflow-x:hidden;
+    border-radius:16px;
+  }
+
+  table{
+    width:100%;
+    min-width:0;
+    table-layout:fixed;
+  }
+
+  th{
+    padding:10px 4px;
+    font-size:10px;
+    white-space:normal;
+  }
+
+  td{
+    padding:10px 4px;
+    font-size:11px;
+  }
+
+  caption{
+    font-size:20px;
+    padding:18px 15px 10px;
+  }
+
+  th:first-child{
+    width:17%;
+  }
+
+  th:nth-child(2){
+    width:22%;
+  }
+
+  th:nth-child(3),
+  th:nth-child(4),
+  th:nth-child(5){
+    width:20.33%;
+  }
 
   section{
     padding:60px 0;
